@@ -1,3 +1,5 @@
+const {errorHandler, two,three} = require('./errorHandler');
+
 async function getData() {
   try {
     // undefined.find();
@@ -12,8 +14,12 @@ async function getData() {
   console.log("done 2 ~~");
 }
 getData();
+two();
+three();
 
-function errorHandler(error) {
+console.log(errorHandler,two);
+
+/* function errorHandler(error) {
   const { name, message, stack } = error;
   //industry level e error guloke logger e record kore rakha hoy.
   // logger.error({
@@ -22,5 +28,5 @@ function errorHandler(error) {
   //   stack
   // })
   console.log(name,message)
-}
+} */
 
